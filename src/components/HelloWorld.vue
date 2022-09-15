@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
   import { ref } from 'vue' 
-import { MediaTool } from '../MediaTool/MediaTool';
+import { MediaTool, MediaToolAudioInsert } from '../MediaTool/MediaTool';
   
   const buttonEvent = async () => {
     // let inputDom = document.getElementById('file') as HTMLInputElement;
@@ -20,7 +20,24 @@ import { MediaTool } from '../MediaTool/MediaTool';
     await mediaTool.load();
     // const blob = await mediaTool.convert('webm', 'mp4', 'https://resources.laihua.com/2022-9-8/6b2d7eb0-2f56-11ed-acd1-2f6293e25486.mp3');
 
-    const blob = await mediaTool.addOverlay('https://resources.laihua.com/2022-8-24/1f130c26-e030-4e54-a7a5-49a5ba0d2abb.mp4', 'https://v.moele.me/v/1431/9421057_a-01.webm');
+    const blob = await mediaTool.addOverlay('https://resources.laihua.com/2021-2-6/98383168-06b5-42ab-936d-783f6a679262.mp4', 'https://v.moele.me/v/1431/9421057_a-01.webm', {x: 20, y: 400, width: 500, height: 500});
+    /*
+    https://resources.laihua.com/2022-9-15/f74d3eb0-34d0-11ed-86ad-21fb8a4b0f0f.mp3
+    https://resources.laihua.com/2022-9-15/f769ee70-34d0-11ed-8995-25a0ca1030e7.mp3
+    https://resources.laihua.com/2022-9-15/f7432c90-34d0-11ed-8995-25a0ca1030e7.mp3
+    https://resources.laihua.com/2022-9-15/f7586240-34d0-11ed-86ad-21fb8a4b0f0f.mp3
+    https://resources.laihua.com/2022-9-15/f7552df0-34d0-11ed-8995-25a0ca1030e7.mp3
+    https://resources.laihua.com/2022-9-15/f7317950-34d0-11ed-86ad-21fb8a4b0f0f.mp3
+    */
+
+    // let audios: MediaToolAudioInsert[] = [
+    // {url: 'https://resources.laihua.com/2022-9-15/f74d3eb0-34d0-11ed-86ad-21fb8a4b0f0f.mp3', duration: 1.5},
+    // {url: 'https://resources.laihua.com/2022-9-15/f769ee70-34d0-11ed-8995-25a0ca1030e7.mp3', duration: 3.5},
+    // {url: 'https://resources.laihua.com/2022-9-15/f7432c90-34d0-11ed-8995-25a0ca1030e7.mp3', duration: 3.5},
+    // {url: 'https://resources.laihua.com/2022-9-15/f7552df0-34d0-11ed-8995-25a0ca1030e7.mp3', duration: 4.5},
+    // {url: 'https://resources.laihua.com/2022-9-15/f7317950-34d0-11ed-86ad-21fb8a4b0f0f.mp3', duration: 1.5}];
+
+    // const blob = await mediaTool.videoAppendAudio('https://resources.laihua.com/2021-2-6/98383168-06b5-42ab-936d-783f6a679262.mp4', audios);
     saveAs(blob);
   }
 
