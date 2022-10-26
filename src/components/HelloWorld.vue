@@ -24,8 +24,8 @@ import { input, addOverlay } from "../MediaTool/NewTool";
 
     //mac: https://resources.laihua.com/2022-10-25/5f741250-542c-11ed-9785-d94a0a471778.mp3
     //windows: https://resources.laihua.com/2022-10-25/08028990-5434-11ed-9785-d94a0a471778.mp3
-    //newMac: https://resources.laihua.com/2022-10-25/096f4180-544b-11ed-9785-d94a0a471778.mp3
-    const blob = await mediaTool.addOverlay('https://resources.laihua.com/2022-10-25/096f4180-544b-11ed-9785-d94a0a471778.mp3', 'https://resources.laihua.com/2022-10-25/2d03f1b0-5430-11ed-9785-d94a0a471778.mp4', {x: 20, y: 400, width: 500, height: 500});
+    //newMac: https://resources.laihua.com/2022-10-26/6fa73530-54e0-11ed-9785-d94a0a471778.mp3
+    const blob = await mediaTool.addOverlay('https://resources.laihua.com/2022-10-26/6fa73530-54e0-11ed-9785-d94a0a471778.mp3', 'https://resources.laihua.com/2022-10-25/2d03f1b0-5430-11ed-9785-d94a0a471778.mp4', {x: 20, y: 400, width: 500, height: 500});
     /*
     https://resources.laihua.com/2022-9-15/f74d3eb0-34d0-11ed-86ad-21fb8a4b0f0f.mp3
     https://resources.laihua.com/2022-9-15/f769ee70-34d0-11ed-8995-25a0ca1030e7.mp3
